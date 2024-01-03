@@ -18,7 +18,7 @@ const setAdsOptions = () => {
 
   JioAds.setConfiguration({
     endpoint: "jioads",
-    reqType: "dev",
+    // reqType: "dev",
     clkSelf: false,
     adRequestTimeout: 3000,
     adRenderingTimeout: 4000,
