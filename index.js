@@ -28,9 +28,12 @@ const setAdsOptions = () => {
 const createAd = () => {
   const elem = document.getElementById("box-ad");
   const ads = document.createElement("ins");
-  ads.id = "159926";
+  ads.id = "ui_159926";
   ads.dataset.adspotKey = "7sbaj6z4";
   ads.dataset.source = "www.fancode.com";
+  ads.dataset.adSizes = "728x90";
+  ads.dataset.refreshRate = "100";
+  // ads.dataset.containerId = "banner";
   elem.appendChild(ads);
 };
 
