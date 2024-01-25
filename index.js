@@ -50,11 +50,11 @@ const setAdsOptions = () => {
   });
 };
 
-const createAd = (size) => {
+const createAd = (size, adSpot) => {
   const elem = document.getElementById("box-ad");
   const ads = document.createElement("ins");
   ads.id = "ui_159926";
-  ads.dataset.adspotKey = "7sbaj6z4";
+  ads.dataset.adspotKey = adSpot;
   ads.dataset.source = "www.fancode.com";
   ads.dataset.adSizes = size;
   ads.dataset.refreshRate = "5";
@@ -80,10 +80,12 @@ const onClick = () => {
     alert("Invalid Ad Size");
     return;
   }
+  const adSpot = document.getElementById("ad-spot");
   const value = adInput.value || "320x100";
+  const adSpotValue = adSpot.value || "7sbaj6z4";
   document.getElementById("box-ad").innerHTML = "";
-  createAd(value);
-  console.log("onClick: ", value);
+  createAd(value, adSpotValue);
+  console.log("onClick: ", value, adSpotValue);
 };
 
 const main = () => {
